@@ -159,4 +159,29 @@ $ http://localhost:3000/api-docs#/
 ```bash
 # unit tests
 $ npm run test
+
+Resultados de los tests:
+
+```bash
+$ npm run test
+
+> jest e2e
+
+ PASS  e2e/index.test.ts
+  E2E Tests
+    ✓ should get a response with status code 200 (73 ms)
+    Basic Items functionality
+      ✓ should be able to list all items (24 ms)
+      ✓ should be able to create a new item and get it by id (15 ms)
+      ✓ should be able to update an item (21 ms)
+      ✓ should be able to delete an item (12 ms)
+    Validations
+      ✓ should validate required fields (7 ms)
+      ✓ should not allow for negative pricing for new items (6 ms)
+      ✓ should not allow for negative pricing for updated items (12 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        3.507 s
 ```

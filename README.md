@@ -119,8 +119,7 @@ $ npm run start
 # macOS o Linux
 $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 # Windows
-$ Ve a la página oficial de NVM para Windows:
-https://github.com/coreybutler/nvm-windows/releases
+$ Ve a la página oficial de NVM para Windows: https://github.com/coreybutler/nvm-windows/releases
 Descarga el instalador más reciente (nvm-setup.zip) y ejecútalo.
 
 # 2. Instalar Node.js

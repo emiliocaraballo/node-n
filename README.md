@@ -55,7 +55,7 @@ Crea un archivo `devcontainer.json` con el siguiente contenido:
 Crea un archivo `Dockerfile` con el siguiente contenido:
 
 ```bash
-FROM node:20
+FROM node:20.18.1-slim
 
 # Install basic development tools
 RUN apt update && apt install -y less man-db sudo
@@ -72,49 +72,31 @@ ENV DEVCONTAINER=true
 
 
 
-
+### Configurar Base de datos y variable de entorno de proyecto.
 ```bash
-# instalacion de dependencias
-$ npm i
-# o
-$ yarn install
-
-# creación del archivo .env basado en el archivo .env.example
+# creación del archivo .env basado en el archivo .env.example y configurar segun el ambiente.
 $ cp .env.example .env
 
 # ------ paso opcional -------
 # si no tiene una base de datos, puede crear una docker-compose.yml 
 # archivo basado en el docker-compose.yml.example archivo en el proyecto
 
-
-# Nota: si se ejecuta directamente desde docker el backend el host de base de dato
-# en el archivo ormconfig.json debe ir asi
-# "host": "postgresql",
-# si se encuentra en fuera de docker
-# "host": "localhost",
-
 $ cp docker-compose.yml.example docker-compose.yml
-$ docker-compose up
+$ docker compose up -d
 
 # debe haber instalado previamente docker y docker-compose en
 # tu ordenador, para que funcione correctamente, si todo está correcto
 # debe tener lista la base de datos de su proyecto.
-# ------ paso opcional -------
 
-# ejecución de migraciones
-$ npm run migrate:up
-# o
-$ yarn migrate:up
-
-# ejecución de seeds
-$ npm run seed:run
-
-# ------ step optional -------
 ```
 
-## Running the app
+## Running the app Localmente
 
 ```bash
+# Paso a paso de correr el proyecto localmente.
+
+$ npm i
+
 # development
 $ npm run dev
 
@@ -127,15 +109,14 @@ $ npm run start
 
 ```bash
 # the default paths of the project are:
-$ http://localhost:3000/api/v1/user              # POST
-$ http://localhost:3000/api/v1/technical         # POST
-$ http://localhost:3000/api/v1/service           # POST
-$ http://localhost:3000/api/v1/orde              # POST
-$ http://localhost:3000/api/v1/service           # GET
-$ http://localhost:3000/api/v1/technical/orders  # GET
+$ http://localhost:3000/items              # GET
+$ http://localhost:3000/items/{id}         # GET
+$ http://localhost:3000/items              # POST
+$ http://localhost:3000/items              # PUT
+$ http://localhost:3000/items              # DELETE
 
 Documentación en Swagger 
-$ http://localhost:3000/api/docs
+$ http://localhost:3000/api-docs#/
 ```
 
 ## Test

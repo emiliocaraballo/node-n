@@ -90,12 +90,48 @@ $ docker compose up -d
 
 ```
 
+## Running the app en Dev Container
+
+```bash
+# 1. Abre Visual Studio Code en la raíz de tu proyecto
+# 2. Presiona F1 o Ctrl+Shift+P y selecciona "Remote-Containers: Reopen in Container"
+# 3. VS Code construirá y abrirá el contenedor definido en .devcontainer. Este proceso puede tomar unos minutos.
+# verificar que la variable de entorno este de forma correcta ejemplo
+
+# si esta en modo devcontainer
+$ DATABASE_HOST=host.docker.internal
+# para que pueda acceder a tu maquina local y se pueda conectar a la BD. en caso que este usandolo en docker.
+
+# development
+$ npm run dev
+
+# production mode
+$ npm run build
+$ npm run start
+```
+
 ## Running the app Localmente
 
 ```bash
 # Paso a paso de correr el proyecto localmente.
 
+# 1. Instalar NVM 
+# macOS o Linux
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+# Windows
+$ Ve a la página oficial de NVM para Windows:
+https://github.com/coreybutler/nvm-windows/releases
+Descarga el instalador más reciente (nvm-setup.zip) y ejecútalo.
+
+# 2. Instalar Node.js
+$ nvm install 20.18.1
+$ nvm use 20.18.1
+
+# 3. Instalar dependencias
+
 $ npm i
+
+# 4. Ejecutar el proyecto
 
 # development
 $ npm run dev

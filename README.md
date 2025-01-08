@@ -8,13 +8,11 @@ La entidad tiene 3 campos: `id`, `name` y `price`.
 Tu tarea es completar la implementación de toda la funcionalidad de forma tal de que los tests e2e pasen exitosamente.
 
 
-## Installation
+# Installation
 
-# Configuración del Entorno de Desarrollo con .devcontainer
+## Configuración del Entorno de Desarrollo con .devcontainer
 
 Este documento explica cómo configurar un entorno de desarrollo en **Visual Studio Code** utilizando un archivo **.devcontainer**, para gestionar **Node.js 20.18.1**
-
----
 
 ## **Requisitos previos**
 

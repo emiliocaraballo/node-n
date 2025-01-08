@@ -162,9 +162,6 @@ $ npm run test
 
 Resultados de los tests:
 
-```bash
-$ npm run test
-
 > jest e2e
 
  PASS  e2e/index.test.ts

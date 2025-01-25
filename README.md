@@ -13,6 +13,7 @@ Contiene funcionalidades y utilidades comunes que pueden ser reutilizadas en mú
 
 #### Estructura de Directorios
 
+```
 services-common/ 
 └── src/ 
     ├── auth-decorators/ 
@@ -25,7 +26,7 @@ services-common/
     ├── constants.ts 
     ├── index.ts 
     └── swagger.config.ts
-
+```
 
 
 #### Descripción
@@ -46,7 +47,7 @@ services-common/
 El microservicio API principal que utiliza los repo common proporcionados por `services-common`.
 
 #### Estructura de Directorios
-
+```
 services-api/ 
     └── src/ 
         ├── models/ 
@@ -70,7 +71,7 @@ services-api/
         │            └── user.module.ts 
         ├── app.module.ts 
         └── main.ts
-
+```
 #### Descripción
 
 - **models/user/**: Contiene la entidad User y el repositorio para interacciones con la base de datos.
